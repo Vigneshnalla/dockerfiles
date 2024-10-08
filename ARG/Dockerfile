@@ -1,5 +1,8 @@
-ARG version
-FROM almalinux:${version:-9}
-ARG COURSE
+ARG version=9
+FROM almalinux:${version}
+
+ARG Duration=120hrs
+ENV Duration=${Duration}
+
 RUN echo "Course ${COURSE}"
-CMD [ "sleep","100" ]
+CMD [ "sleep", "100" ]
